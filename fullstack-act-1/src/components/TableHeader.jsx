@@ -2,16 +2,12 @@
 
 const TableHeader = () => {
   return (
-    <table className="table-fixed border-collapse border border-[#4d15d1]">
-      <thead className="bg-[#290b6f]">
-        <tr className="text-white">
-          <th className=''>Course No.</th>
-          <th className=''>Course Name</th>
-          <th className=''>Units</th>
-          <th className=''>Grade</th>
-        </tr>
-      </thead>
-    </table>
+    <tr className='max-w-full bg-[#4d5639] text-[#f7f6f3]'>
+      <th className='border-2	border-solid border-white border-spacing-1'>Course No.</th>
+      <th className='border-2	border-solid border-white border-spacing-1'>Course Name</th>
+      <th className='border-2	border-solid border-white border-spacing-1'>Units</th>
+      <th className='border-2	border-solid border-white border-spacing-1'>Grade</th>
+    </tr>
   )
 }
 

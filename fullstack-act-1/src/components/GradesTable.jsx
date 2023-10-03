@@ -16,7 +16,7 @@ const GradesTable = (props) => {
     }
   
     const totGP =  props.items.reduce((total, data) => {
-      return total + (data.courseUnits * letterGrade[data.courseGrade])
+      return total + (data.courseUnits * letterGrade[data.letterGrade])
     } , 0)
   
     const totalUnits =  props.items.reduce((total, data) => {
@@ -36,18 +36,17 @@ const GradesTable = (props) => {
                   props.query.toLowerCase() === '' ||
                   item.courseNo.toLowerCase().includes(props.query.toLowerCase()) || 
                   item.courseName.toLowerCase().includes(props.query.toLowerCase()) ||
-                  item.courseGrade.toLowerCase().includes(props.query.toLowerCase()) ||
+                  item.letterGrade.toLowerCase().includes(props.query.toLowerCase()) ||
                   item.courseUnits.includes(props.query) 
                 )
             )
 
                 .map((item, index) => (
                     <tr key={item.id}>
-                        {/* <th scope='row'>{index+1}</th> */}
-                        <td className=''>{item.courseNo}</td>
-                        <td className=''>{item.courseName}</td>
-                        <td className=''>{item.courseUnits}</td>
-                        <td className=''>{item.courseGrade}</td>
+                        <td className='border-2	border-solid border-[#f7f6f3] bg-[#6a5c8a] border-spacing-1 p-2 w-20 font-semibold text-[#f7f6f3]'>{item.courseNo}</td>
+                        <td className='border-2	border-solid border-[#f7f6f3] bg-[#6a5c8a] border-spacing-1 p-2 w-20 font-semibold text-[#f7f6f3]'>{item.courseName}</td>
+                        <td className='border-2	border-solid border-[#f7f6f3] bg-[#6a5c8a] border-spacing-1 p-2 w-20 font-semibold text-[#f7f6f3]'>{item.courseUnits}</td>
+                        <td className='border-2	border-solid border-[#f7f6f3] bg-[#6a5c8a] border-spacing-1 p-2 w-20 font-semibold text-[#f7f6f3]'>{item.letterGrade}</td>
                     </tr>
                 )
             )
@@ -56,8 +55,8 @@ const GradesTable = (props) => {
             <tr>
               <td></td>
               <td></td>
-              <td className=''>Total QPI</td>
-              <td className=''>{totQPI}</td>
+              <td className='border-2	border-solid border-[#f7f6f3] bg-[#6a5c8a] border-spacing-1 p-2 w-20 font-semibold text-[#f7f6f3]'>Total QPI</td>
+              <td className='border-2	border-solid border-[#f7f6f3] bg-[#6a5c8a] border-spacing-1 p-2 w-20 font-semibold text-[#f7f6f3]'>{totQPI}</td>
            </tr>
   
       </>
